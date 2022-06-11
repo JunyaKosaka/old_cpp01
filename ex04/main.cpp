@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
         std::cout << "INPUT LIKE THIS ./a.out <filename> <s1> <s2>" << std::endl;
         return 1;
     }
+	
     const std::string input_file(argv[1]);
 	std::ifstream ifs(input_file);
     if (ifs.fail()) {
@@ -35,7 +36,10 @@ int main(int argc, char *argv[]) {
 
     std::string::size_type pos = file_str.find(s1);
     while (pos != std::string::npos) {
-        file_str.replace(pos, s1.length(), s2); // .replaceは使えない
+		for (int i = 0; i < int(s1.length()); i++) {
+			*(pos+i) = s2[i];
+		}
+        // file_str.replace(pos, s1.length(), s2); // .replaceは使えない
         pos = file_str.find(s1, pos + s2.length());
     }
 	ofs << file_str << std::endl;

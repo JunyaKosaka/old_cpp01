@@ -1,19 +1,21 @@
-NAME = a.out
-CC = clang++
-STD = -std=c++98
-SRCS = main.cpp 
-FLAGS = -Wall -Wextra -Werror
+NAME		:= a.out
 
-$(NAME) : $(SRCS)
-	$(CC) $(STD) $(FLAGS) $(SRCS) -o $(NAME)
+SRCS		:= main.cpp 
+OBJS		:= $(SRCS:.cpp=.o)
+
+CXX			:= c++
+CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 all	: $(NAME)
 
+$(NAME) : $(OBJS)
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
 clean :
-	/bin/rm -rf $(OBJS)
+	$(RM) $(OBJS)
 
 fclean : clean
-	/bin/rm -rf $(NAME)
+	$(RM) $(NAME)
 
 re : fclean all
 
