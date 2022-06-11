@@ -19,4 +19,7 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re
+test : $(NAME)
+	./$(NAME)
+
+.PHONY : all clean fclean re test

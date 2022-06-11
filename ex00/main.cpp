@@ -18,6 +18,7 @@ int main(void) {
 	std::string r_name;
 	srand(time(NULL));
 	r_name += 'a' + (rand() % 26);
+	r_name += 'a' + (rand() % 26);
 	r_name += "_zombie";
 	randomChump(r_name);
 
