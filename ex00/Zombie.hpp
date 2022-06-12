@@ -9,7 +9,7 @@ class Zombie {
 public:
 	void			announce(void);
 
-	Zombie(std::string const &name);
+	Zombie(std::string const &name = "noname");
 	~Zombie(void);
 
 private:
@@ -17,5 +17,7 @@ private:
 
 };
 
+Zombie* newZombie(std::string const &name);
+void randomChump( std::string const &name );
 
 #endif  // ZOMBIE_HPP_

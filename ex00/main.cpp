@@ -2,10 +2,6 @@
 #include <cstdlib>
 #include <ctime>
 
-Zombie* newZombie(std::string const &name);
-
-void randomChump( std::string const &name );
-
 int main(void) {
 	Zombie* n_Zombie = new Zombie("zzz");
 	n_Zombie->announce();
@@ -21,6 +17,9 @@ int main(void) {
 	r_name += 'a' + (rand() % 26);
 	r_name += "_zombie";
 	randomChump(r_name);
+
+	Zombie noname = Zombie();
+	noname.announce();
 
 	return 0;
 }
