@@ -6,5 +6,5 @@ int main(void) {
 	for (int i = 0; i < N; i++) {
 		z_ptr[i].announce();
 	}
-	delete [] z_ptr;
+	delete[] z_ptr;
 }
