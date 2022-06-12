@@ -1,5 +1,5 @@
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef WEAPON_HPP_
+# define WEAPON_HPP_
 
 # include <string>
 # include <iostream>
@@ -19,4 +19,4 @@ private:
 
 };
 
-#endif
+#endif  // WEAPON_HPP_

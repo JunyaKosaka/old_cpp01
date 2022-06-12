@@ -2,9 +2,9 @@
 #include <cstdlib>
 #include <ctime>
 
-Zombie* newZombie(std::string name);
+Zombie* newZombie(std::string const &name);
 
-void randomChump( std::string name );
+void randomChump( std::string const &name );
 
 int main(void) {
 	Zombie* n_Zombie = new Zombie("zzz");

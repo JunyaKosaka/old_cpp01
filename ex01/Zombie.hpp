@@ -1,5 +1,5 @@
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ZOMBIE_HPP_
+# define ZOMBIE_HPP_
 
 # include <string>
 # include <iostream>
@@ -20,4 +20,4 @@ private:
 
 Zombie* zombieHorde(int N, std::string name);
 
-#endif
+#endif  // ZOMBIE_HPP_

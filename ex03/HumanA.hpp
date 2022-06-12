@@ -1,5 +1,5 @@
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef HUMANA_HPP_
+# define HUMANA_HPP_
 
 # include <string>
 # include <iostream>
@@ -18,4 +18,4 @@ private:
 	Weapon			weapon_;
 };
 
-#endif
+#endif  // HUMANA_HPP_

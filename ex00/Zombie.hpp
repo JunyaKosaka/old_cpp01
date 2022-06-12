@@ -1,5 +1,5 @@
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ZOMBIE_HPP_
+# define ZOMBIE_HPP_
 
 # include <string>
 # include <iostream>
@@ -9,7 +9,7 @@ class Zombie {
 public:
 	void			announce(void);
 
-	Zombie(std::string name);
+	Zombie(std::string const &name);
 	~Zombie(void);
 
 private:
@@ -18,4 +18,4 @@ private:
 };
 
 
-#endif
+#endif  // ZOMBIE_HPP_
