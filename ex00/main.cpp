@@ -21,5 +21,6 @@ int main(void) {
 	Zombie noname = Zombie();
 	noname.announce();
 
+	system("leaks a.out");
 	return 0;
 }

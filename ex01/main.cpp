@@ -7,4 +7,5 @@ int main(void) {
 		z_ptr[i].announce();
 	}
 	delete[] z_ptr;
+	// system("leaks a.out");
 }
