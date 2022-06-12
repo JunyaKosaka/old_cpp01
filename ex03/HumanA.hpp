@@ -15,8 +15,8 @@ public:
 
 
 private:
-	std::string		name_;
-	Weapon			&weapon_;
+	std::string		_name;
+	Weapon			&_weapon;
 };
 
 #endif  // HUMANA_HPP_

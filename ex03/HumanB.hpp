@@ -17,8 +17,8 @@ public:
 
 private:
 	HumanB();
-	std::string		name_;
-	Weapon			*weapon_;
+	std::string		_name;
+	Weapon			*_weapon;
 };
 
 #endif  // HUMANB_HPP_
