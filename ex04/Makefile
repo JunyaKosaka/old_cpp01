@@ -29,7 +29,7 @@ test : debug
 	echo "aab\nbbb\ncbb" > $(INPUTFILE)
 	./$(NAME) $(INPUTFILE) bb xxx
 	cat $(INPUTFILE).replace
-	-@./$(NAME) nonexist aa bb
-	-@./$(NAME) $(INPUTFILE) "" bb
+	-./$(NAME) nonexist aa bb
+	-./$(NAME) $(INPUTFILE) "" bb
 
 .PHONY : all clean fclean re test debug
