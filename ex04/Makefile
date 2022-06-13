@@ -32,6 +32,6 @@ test : debug
 	-./$(NAME) $(INPUTFILE) "" bb
 
 lint :
-	cpplint $(SRC)
+	cpplint $(SRCS)
 
 .PHONY : all clean fclean re test debug
