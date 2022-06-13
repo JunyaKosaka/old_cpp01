@@ -6,9 +6,9 @@
 class Harl {
 
 public:
-	Harl(std::string const &name, Weapon &weapon);
-	~Harl();
-	void      complain(std::string level);
+  Harl(std::string const &name, Weapon &weapon);
+  ~Harl();
+  void      complain(std::string level);
 
 
 private:
