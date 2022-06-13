@@ -3,7 +3,7 @@
 #include <string>
 
 int main(int argc, char *argv[]) {
-  if (argc != 4) {
+  if (argc != 4 || std::string(argv[2]) == "") {
     std::cout << "[USAGE] ./a.out <filename> <s1> <s2>" << std::endl;
     return 1;
   }
@@ -33,11 +33,11 @@ int main(int argc, char *argv[]) {
 		file_str += '\n';
 	}
 
+  std::string new_str("");
   std::string::size_type pos = file_str.find(s1);
   while (pos != std::string::npos) {
-		for (int i = 0; i < int(s1.length()); i++) {
-			file_str[pos+i] = s2[i];
-		}
+    new_str = file_str.substr(0, pos) + s2 + file_str.substr(pos + s1.length());
+    file_str = new_str;
     pos = file_str.find(s1, pos + s2.length());
   }
 	ofs << file_str << std::endl;
@@ -45,5 +45,6 @@ int main(int argc, char *argv[]) {
 	ifs.close();
 	ofs.close();
 
+  // system("leaks a.out");
   return 0;
 }
