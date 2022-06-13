@@ -19,7 +19,10 @@ fclean : clean
 
 re : fclean all
 
-test : $(NAME)
-	./$(NAME)
+INPUTFILE	:= sample1.txt
 
-.PHONY : all clean fclean re
+test : $(NAME)
+	./$(NAME) $(INPUTFILE) bb cccc
+	cat $(INPUTFILE).replace
+
+.PHONY : all clean fclean re test
