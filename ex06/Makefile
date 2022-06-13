@@ -25,4 +25,7 @@ re : fclean all
 
 test : debug
 
-.PHONY : all clean fclean re test debug
+lint :
+	cpplint $(SRCS)
+
+.PHONY : all debug clean fclean re test lint

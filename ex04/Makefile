@@ -34,4 +34,4 @@ test : debug
 lint :
 	cpplint $(SRCS)
 
-.PHONY : all clean fclean re test debug
+.PHONY : all debug clean fclean re test lint
