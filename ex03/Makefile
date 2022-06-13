@@ -22,4 +22,7 @@ re : fclean all
 test : $(NAME)
 	./$(NAME)
 
-.PHONY : all clean fclean re
+lint :
+	cpplint $(SRCS)
+
+.PHONY : all clean fclean re test lint
