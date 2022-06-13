@@ -24,13 +24,13 @@ int main(int argc, char *argv[]) {
 
   const std::string s1(argv[2]), s2(argv[3]);
 	std::string file_str(""), line("");
-	while (1) {
+	while (true) {
 		std::getline(ifs, line);
 		file_str += line;
 		if (ifs.eof()) {
 			break;
 		}
-		file_str += '\n';
+		file_str += "\n";
 	}
 
   std::string new_str("");
@@ -45,6 +45,5 @@ int main(int argc, char *argv[]) {
 	ifs.close();
 	ofs.close();
 
-  // system("leaks a.out");
   return 0;
 }
