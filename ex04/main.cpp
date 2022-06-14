@@ -33,11 +33,9 @@ int main(int argc, char *argv[]) {
     file_str += "\n";
   }
 
-  std::string new_str("");
   std::string::size_type pos = file_str.find(s1);
   while (pos != std::string::npos) {
-    new_str = file_str.substr(0, pos) + s2 + file_str.substr(pos + s1.length());
-    file_str = new_str;
+    file_str = file_str.substr(0, pos) + s2 + file_str.substr(pos + s1.length());
     pos = file_str.find(s1, pos + s2.length());
   }
   ofs << file_str << std::endl;
