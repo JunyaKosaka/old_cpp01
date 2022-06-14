@@ -1,6 +1,6 @@
-NAME		:= a.out
+NAME		:= harlFilter
 
-SRCS		:= main.cpp 
+SRCS		:= main.cpp Harl.cpp
 OBJS		:= $(SRCS:.cpp=.o)
 
 CXX			:= c++
@@ -24,6 +24,16 @@ fclean : clean
 re : fclean all
 
 test : debug
+	@echo "\n---  DEBUG  ---"
+	./$(NAME) "DEBUG"
+	@echo "\n---  INFO  ---"
+	./$(NAME) "INFO"
+	@echo "\n---  WARNING  ---"
+	./$(NAME) "WARNING"
+	@echo "\n---  ERROR  ---"
+	./$(NAME) "ERROR"
+	@echo "\n---  UNKNOWN  ---"
+	./$(NAME) "UNKNOWN"
 
 lint :
 	cpplint $(SRCS)
