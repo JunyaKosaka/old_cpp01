@@ -13,6 +13,7 @@ public:
 
 
 private:
+  static const int  level_num = 4;
   void      debug(void);
   void      info(void);
   void      warning(void);

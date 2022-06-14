@@ -28,13 +28,13 @@ void Harl::error(void) {
 }
 
 void Harl::complain(std::string level) {
-  void (Harl::*funcptr[4])() = {
+  void (Harl::*funcptr[Harl::level_num])() = {
     &Harl::debug, &Harl::info, &Harl::warning, &Harl::error
   };
-  std::string level_list[4] = {
+  std::string level_list[Harl::level_num] = {
     "DEBUG", "INFO", "WARNING", "ERROR"
   };
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < Harl::level_num; i++) {
     if (level == level_list[i]) {
       (this->*funcptr[i])();
       return;
