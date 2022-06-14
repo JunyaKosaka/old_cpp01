@@ -10,6 +10,9 @@ all	: $(NAME)
 $(NAME) : $(OBJS)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
+debug : CXXFLAGS += -g -fsanitize=address
+debug : re
+
 clean :
 	$(RM) $(OBJS)
 
@@ -24,4 +27,4 @@ test : $(NAME)
 lint :
 	cpplint $(SRCS)
 
-.PHONY : all clean fclean re test lint
+.PHONY : all debug clean fclean re test lint

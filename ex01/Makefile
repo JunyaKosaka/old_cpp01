@@ -8,6 +8,9 @@ CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 all	: $(NAME)
 
+debug : CXXFLAGS += -g -fsanitize=address
+debug : re
+
 $(NAME) : $(OBJS)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
@@ -25,4 +28,4 @@ test : $(NAME)
 lint :
 	cpplint $(SRCS)
 
-.PHONY : all clean fclean re test lint
+.PHONY : all debug clean fclean re test lint
