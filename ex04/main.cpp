@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
       ofs << file_str[i];
       i++;
     }
-  } 
+  }
 
   ifs.close();
   ofs.close();
