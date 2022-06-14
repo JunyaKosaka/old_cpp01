@@ -1,6 +1,6 @@
 NAME		:= a.out
 
-SRCS		:= main.cpp 
+SRCS		:= main.cpp Harl.cpp
 OBJS		:= $(SRCS:.cpp=.o)
 
 CXX			:= c++
@@ -24,6 +24,7 @@ fclean : clean
 re : fclean all
 
 test : debug
+	./$(NAME)
 
 lint :
 	cpplint $(SRCS)
