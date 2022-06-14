@@ -7,8 +7,8 @@
 class Weapon {
 
 public:
-  const std::string    &getType(void) const; // const member function
-  void      setType(std::string const &type); // const &typeにするべきか
+  const std::string    &getType(void) const;
+  void      setType(std::string const &type);
   Weapon(std::string type);
   Weapon();
   ~Weapon();
