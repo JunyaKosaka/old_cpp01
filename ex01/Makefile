@@ -22,7 +22,7 @@ fclean : clean
 
 re : fclean all
 
-test : $(NAME)
+test : debug
 	./$(NAME)
 
 lint :
