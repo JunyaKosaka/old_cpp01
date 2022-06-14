@@ -26,7 +26,7 @@ re : fclean all
 
 test : debug
 	echo "aab\nbbb\ncbb" > $(INPUTFILE)
-	./$(NAME) $(INPUTFILE) bb xxx
+	./$(NAME) $(INPUTFILE) "bb" xxx
 	cat $(INPUTFILE).replace
 	-./$(NAME) nonexist aa bb
 	-./$(NAME) $(INPUTFILE) "" bb

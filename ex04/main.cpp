@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include <string>
 
 int main(int argc, char *argv[]) {
@@ -23,7 +24,7 @@ int main(int argc, char *argv[]) {
   }
 
   const std::string s1(argv[2]), s2(argv[3]);
-  std::string file_str(""), line("");
+  std::string file_str, line;
   while (true) {
     std::getline(ifs, line);
     file_str += line;
@@ -33,12 +34,22 @@ int main(int argc, char *argv[]) {
     file_str += "\n";
   }
 
-  std::string::size_type pos = file_str.find(s1);
-  while (pos != std::string::npos) {
-    file_str = file_str.substr(0, pos) + s2 + file_str.substr(pos + s1.length());
-    pos = file_str.find(s1, pos + s2.length());
-  }
-  ofs << file_str << std::endl;
+  for (size_t i = 0; i < file_str.length();) {
+    bool occurrence = true;
+    for (size_t j = 0; j < s1.length(); j++) {
+      if (file_str[i+j] != s1[j]) {
+        occurrence = false;
+        break;
+      }
+    }
+    if (occurrence) {
+      ofs << s2;
+      i += s1.length();
+    } else {
+      ofs << file_str[i];
+      i++;
+    }
+  } 
 
   ifs.close();
   ofs.close();
