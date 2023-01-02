@@ -8,7 +8,7 @@ int main(void) {
   delete n_Zombie;
 
   Zombie* z_ptr = newZombie("yyy");
-  (*z_ptr).announce();
+  z_ptr->announce();
   delete z_ptr;
 
   std::string r_name;
